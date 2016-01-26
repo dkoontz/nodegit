@@ -1430,6 +1430,13 @@
         }
       }
     },
+    "push_options": {
+      "fields": {
+        "custom_headers": {
+          "type": "git_strarray"
+        }
+      }
+    },
     "rebase": {
       "functions": {
         "git_rebase_commit": {
@@ -1582,6 +1589,11 @@
           "isAsync": false
         },
         "git_remote_connect": {
+          "args": {
+            "custom_headers": {
+              "type": "git_strarray *"
+            },
+          },
           "isAsync": true,
           "return": {
             "isErrorCode": true
