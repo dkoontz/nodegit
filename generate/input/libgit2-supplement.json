@@ -554,6 +554,38 @@
         }
       ],
       [
+        "git_push_options",
+        {
+          "type": "struct",
+          "fields": [
+            {
+              "type": "unsigned int",
+              "name": "version"
+            },
+            {
+              "type": "unsigned int",
+              "name": "pb_parallelism"
+            },
+            {
+              "type": "git_remote_callbacks",
+              "name": "callbacks"
+            },
+            {
+              "type": "git_strarray",
+              "name": "custom_headers"
+            }
+          ],
+          "used": {
+            "returns": [],
+            "needs": [
+              "git_push_init_options",
+              "git_remote_push",
+              "git_remote_upload"
+            ]
+          }
+        }
+      ],
+      [
         "git_rebase_options",
         {
           "type": "struct",
