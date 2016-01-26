@@ -1592,7 +1592,7 @@
           "args": {
             "custom_headers": {
               "type": "git_strarray *"
-            },
+            }
           },
           "isAsync": true,
           "return": {
