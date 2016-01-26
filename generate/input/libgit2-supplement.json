@@ -108,6 +108,44 @@
   },
   "new" : {
     "functions": {
+      "git_remote_connect": {
+  			"type": "function",
+  			"file": "remote.h",
+  			"line": 246,
+  			"lineto": 246,
+  			"args": [{
+  				"name": "remote",
+  				"type": "git_remote *",
+  				"comment": "the remote to connect to"
+  			},
+  			{
+  				"name": "direction",
+  				"type": "git_direction",
+  				"comment": "GIT_DIRECTION_FETCH if you want to fetch or\n GIT_DIRECTION_PUSH if you want to push"
+  			},
+  			{
+  				"name": "callbacks",
+  				"type": "const git_remote_callbacks *",
+  				"comment": "the callbacks to use for this connection"
+  			},
+        {
+          "name": "custom_headers",
+          "type": "const git_strarray *"
+        }],
+  			"argline": "git_remote *remote, git_direction direction, const git_remote_callbacks *callbacks",
+  			"sig": "git_remote *::git_direction::const git_remote_callbacks *",
+  			"return": {
+  				"type": "int",
+  				"comment": " 0 or an error code"
+  			},
+  			"description": "<p>Open a connection to a remote</p>\n",
+  			"comments": "<p>The transport is selected based on the URL. The direction argument\n is due to a limitation of the git protocol (over TCP or SSH) which\n starts up a specific binary which can only do the one or the other.</p>\n",
+  			"group": "remote",
+  			"examples": {
+  				"network/fetch.c": ["ex/v0.23.2/network/fetch.html#git_remote_connect-6"],
+  				"network/ls-remote.c": ["ex/v0.23.2/network/ls-remote.html#git_remote_connect-4"]
+  			}
+  		},
       "git_rebase_next": {
         "type": "function",
         "file": "rebase.h",
