@@ -1591,7 +1591,7 @@
         "git_remote_connect": {
           "args": {
             "custom_headers": {
-              "type": "git_strarray *"
+              "isOptional": true
             }
           },
           "isAsync": true,
